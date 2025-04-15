@@ -21,5 +21,5 @@ for epoch in range(total_epochs):
             Y_pred_train = model(X_train_tensor)
             Y_pred_test = model(X_test_tensor)
             train_loss = mean_squared_error(Y_train_tensor.numpy(), Y_pred_train.numpy())
-            test_loss = mean_squared_error(Y_test_tensor.numpy(), Y_pred_test.numpy())
-            print(f"Epoch {epoch + 1}, Train Loss: {train_loss:.4f}, Test Loss: {test_loss:.4f}")
+            val_loss = mean_squared_error(Y_val_tensor.numpy(), Y_pred_test.numpy())
+            print(f"Epoch {epoch + 1}, Train Loss: {train_loss:.4f}, Val Loss: {val_loss:.4f}")
