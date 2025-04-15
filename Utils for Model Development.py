@@ -14,7 +14,7 @@ def train_step(n_samples):
     
     
     # Forward pass
-    pred, _, _, _ = mc_predictions_train(model, X_train_tensor, n_samples = n_samples)
+    pred, _, _, _ = mc_predictions(model, X_train_tensor, n_samples = n_samples)
     
     mse_loss = criterion(pred, Y_train_tensor)
     kl_loss = bnn.BKLLoss(reduction='mean', last_layer_only=False)
