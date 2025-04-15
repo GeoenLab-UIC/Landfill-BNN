@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 15 12:13:15 2025
-
-@author: Researcher
-"""
-
 class BNN(nn.Module):
     def __init__(self, input_size=10, hidden_size_1=15, num_layers=1, 
                  activation_1=nn.ReLU, activation_2=nn.ReLU):
