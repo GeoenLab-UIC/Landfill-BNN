@@ -1,5 +1,5 @@
 
-def mc_predictions_train(model, X_tensor, n_samples=100):
+def mc_predictions(model, X_tensor, n_samples=100):
     model.train()
     predictions = torch.stack([model(X_tensor) for _ in range(n_samples)])
     mean_prediction = predictions.mean(dim=0)
