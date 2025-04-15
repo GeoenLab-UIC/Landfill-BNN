@@ -3,7 +3,7 @@ input_size = X_train.shape[1]
 hidden_size = 20
 activation_1 = nn.ReLU
 activation_2 = nn.Sigmoid
-model = BNN1(input_size, hidden_size, 2, activation_1, activation_2)
+model = BNN(input_size, hidden_size, 2, activation_1, activation_2)
 
 # Switch to Adam optimizer
 optimizer = torch.optim.Adam(model.parameters(), lr=0.1)
